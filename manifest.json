@@ -1,8 +1,8 @@
 {
-  "name": "Gunbot Extensions",
+  "name": "Gun Bot Bar",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension adds useful features to gunbot.net",
+  "description": "Adds a features to gunbot.net via a bar on the bottom of the browser window",
   "homepage_url": "http://www.mjrcode.net",
   "icons": {
     "16": "icons/icon16.png",
@@ -10,27 +10,26 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
+  "options_page": "src/options_custom/index.html",
   "permissions": [
-    "http://www.gunbot.com/*"
+    "https://www.gunbot.net/*",
+	"http://www.gunbot.net/*"
   ],
+  "omnibox": {
+    "keyword": "gbbar"
+  },
   "content_scripts": [
     {
       "matches": [
-        "http://www.gunbot.net/*",
-        "https://www.gunbot.net/*"
-      ],
-      "css": [
-        "src/inject/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "http://www.gunbot.net/*",
-        "https://www.gunbot.net/*"
+        "http://www.gunbot.net/*"
       ],
       "js": [
+        "js/jquery/jquery.min.js",
         "src/inject/inject.js"
-      ]
+      ],
+	  "css": [
+	    "src/inject/inject.css"
+	  ]
     }
   ]
 }
