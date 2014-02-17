@@ -17,8 +17,8 @@ chrome.extension.sendMessage({}, function(response) {
 		temp.each(function(){
 			console.log(this)
 			var price = $(this).text()
-								.replace("/rd","")
-								.replace("$","");
+				.replace("/rd","")
+				.replace("$","");
 			console.log(price);
 			sum+= parseFloat(price);
 			console.log("sum:" + sum);

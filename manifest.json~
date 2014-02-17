@@ -13,7 +13,7 @@
   "options_page": "src/options_custom/index.html",
   "permissions": [
     "https://www.gunbot.net/*",
-    "http://www.gunbot.net/*"
+	"http://www.gunbot.net/*"
   ],
   "omnibox": {
     "keyword": "gbbar"
